@@ -1,4 +1,6 @@
-public class Main {
+package Assignment_1 ;
+
+public class Prac1o2 {
     public static void main(String[] args) {
 
         int[] arr = {1,2,3,40,3,2,31,40};

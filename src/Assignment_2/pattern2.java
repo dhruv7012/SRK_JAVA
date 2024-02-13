@@ -1,3 +1,4 @@
+package Assignment_2;
 public class pattern2 {
 
     public static void main(String[] args) {

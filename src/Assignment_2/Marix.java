@@ -1,3 +1,4 @@
+package Assignment_2;
 public class Marix {
     public static void main(String[] args) {
 

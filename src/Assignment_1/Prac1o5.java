@@ -1,9 +1,10 @@
+package Assignment_1 ;
 import java.util.Scanner;
 
 import static java.lang.Double.parseDouble;
 import static java.lang.Integer.parseInt;
 
-public class Main {
+public class Prac1o5 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);

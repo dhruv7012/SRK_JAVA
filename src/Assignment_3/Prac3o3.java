@@ -1,3 +1,4 @@
+package Assignment_3;
 public class Prac3o3 {
     public static void main(String[] args) {
         int[] arr = {10,10,20,10,10,30,50,10,20,20};

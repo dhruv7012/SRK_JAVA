@@ -1,4 +1,6 @@
-public class Main {
+package Assignment_1 ;
+
+public class Prac1o4 {
 
    public static String str1 = "11110";
    public static String str2 = "0110";

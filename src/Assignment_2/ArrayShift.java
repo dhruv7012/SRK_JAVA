@@ -1,3 +1,5 @@
+package Assignment_2;
+
 public class ArrayShift {
     public static void main(String[] args) {
 

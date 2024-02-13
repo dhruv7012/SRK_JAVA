@@ -1,4 +1,6 @@
-public class Main {
+package Assignment_1 ;
+
+public class Prac1o1 {
     public static void main(String[] args) {
         int[] a = {1,2,3,3,3};
         int[] temp = new int[a.length];

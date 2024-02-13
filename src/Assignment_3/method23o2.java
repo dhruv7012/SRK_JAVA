@@ -1,3 +1,5 @@
+package Assignment_3;
+
 import java.util.Scanner;
 
 public class method23o2 {

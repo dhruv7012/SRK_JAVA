@@ -1,4 +1,6 @@
-public class Main {
+package Assignment_1 ;
+
+public class Prac1o3 {
     public static void printCount(int x, int temp[]){
         int count=0;
         for (int i = 0; i < temp.length; i++) {
