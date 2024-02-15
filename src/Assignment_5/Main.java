@@ -8,8 +8,8 @@ public class Main {
         b.BankNo = 187164872;
         b.BankId = 392493984;
         b.Balance = 1000;
-        b.BankName = "NEDA";
-        b.CustomerName = "Aditya";
+        b.BankName = "DEENA";
+        b.CustomerName = "Dhruv";
         b.AccountNumber = 7823643;
 
         System.out.println(b.getBalance());
