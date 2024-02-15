@@ -9,16 +9,16 @@ public class Main {
     public static void main(String[] args) {
 
 //     QUE 4.1
-        System.out.println(Pattern.matches("[a-zA-Z0-9]{0,6}","adwi12"));
+        System.out.println(Pattern.matches("[a-zA-Z0-9]{0,6}", "adwi12"));
 
 //     QUE 4.2
-        System.out.println(Pattern.matches("[789][0-9]{9}","9012990999"));
+        System.out.println(Pattern.matches("[789][0-9]{9}", "9012990999"));
 
 //     QUE 4.3
-        System.out.println(Pattern.matches("^(?!.*([a-zA-Z]).*\\1)$","ababsdbjkmabjdwbkj"));
+        System.out.println(Pattern.matches("^(?=.*a)(?=.*b)(?=.*c)(?=.*d)(?=.*e)(?=.*f)(?=.*g)(?=.*h)(?=.*i)(?=.*j)(?=.*k)(?=.*l)(?=.*m)(?=.*n)(?=.*o)(?=.*p)(?=.*q)(?=.*r)(?=.*s)(?=.*t)(?=.*u)(?=.*v)(?=.*w)(?=.*x)(?=.*y)(?=.*z)[a-zA-Z]{26,}$", "qqqqqwertyuiopasdfghjklzxcvbnmsdfghj"));
 
 //     QUE 4.4
-        String s = "HUM HAI DHRUV";
+        String s = "DHRUV HAI HUM";
 
         Pattern pt = Pattern.compile("\\b[a-zA-Z]");
         Matcher mt = pt.matcher(s);
@@ -32,20 +32,19 @@ public class Main {
         String s1 = "Dhruv";
         String s2 = "Parekh";
 
-        System.out.println("Before Swap : S1 = " + s1 + " and S2 = " + s2 );
+        System.out.println("Before Swap : S1 = " + s1 + " and S2 = " + s2);
 
         s1 = s1 + ", " + s2;
 
         Pattern r = Pattern.compile("^(.*?),\\s*(.*?)$");
         Matcher m = r.matcher(s1);
 
-        if(m.find()){
-            s1= m.group(2);
-            s2= m.group(1);
+        if (m.find()) {
+            s1 = m.group(2);
+            s2 = m.group(1);
         }
 
-        System.out.println("After Swap : S1 = " + s1 + " and S2 = " + s2 );
-
+        System.out.println("After Swap : S1 = " + s1 + " and S2 = " + s2);
 
     }
 }
