@@ -10,23 +10,25 @@ public class Fourth6 {
         List<String> l = new ArrayList<>();
 
         l.add("Dhruv");
-        l.add("Chup re jay");
-        l.add("");
+        l.add("Mehar");
+        l.add("Jeet");
 
         UpperConCat c = lst -> {
 
-            String s="";
+            StringBuilder s= new StringBuilder();
 
+            for (String string : lst) {
+                s.append(string).append(",");
+            }
 
-
-            return s;
+            s.deleteCharAt(s.length()-1);
+            s = new StringBuilder(s.toString().toUpperCase());
+            return s.toString();
         };
 
-
+        System.out.println(c.getInputStrings(l));
     }
-
 }
-
 
 interface UpperConCat{
     public String getInputStrings(List<String> lst);
