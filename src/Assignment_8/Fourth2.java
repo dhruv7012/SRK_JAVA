@@ -15,10 +15,10 @@ public class Fourth2 {
         l.add("");
         l.add("");
 
-
         CountWords c = lst -> {
+
             int count = 0 ;
-            for (String s : l) {
+            for (String s : lst) {
                 if (s.length() > 3) {
                     count++;
                 }
@@ -28,14 +28,7 @@ public class Fourth2 {
         };
 
         System.out.println(c.countStrings(l));
-
-
-
-
-//        System.out.println("There are total " + count + " Strings");
     }
-
-
 }
 
 interface CountWords {

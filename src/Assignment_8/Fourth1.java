@@ -34,7 +34,7 @@ public class Fourth1 {
 
         CountWords c = lst -> {
             int count = 0 ;
-            for (String s : l) {
+            for (String s : lst) {
                 if (s.isEmpty()) {
                     count++;
                 }

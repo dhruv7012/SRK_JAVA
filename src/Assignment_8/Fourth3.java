@@ -37,7 +37,7 @@ public class Fourth3 {
         CountWordsWithA c = lst -> {
 
             int count = 0;
-            for (String s : l) {
+            for (String s : lst) {
                 if (!s.isEmpty() && (s.charAt(0) == 'a' || s.charAt(0) == 'A')) {
                     count++;
                 }
