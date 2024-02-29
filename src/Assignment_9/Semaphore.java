@@ -27,11 +27,8 @@ public class Semaphore {
 
         int n = 3;
 
-//        for(int i = 0 ; i < n ; i++){
-//            System.out.println(l.get((int) (Math.random()*n)));
-//        }
 
-        int flag = (int) (Math.random() * 2);
+        int flag =(int) (Math.random() * 2);
         int flag2 = (int) (Math.random() * l.size());
         int count = 0;
 
@@ -39,8 +36,15 @@ public class Semaphore {
 
             if (flag2 == count) {
 
-                key = mapElement.getKey();
-                value = (mapElement.getValue());
+                if (flag == 0) {
+                    key = mapElement.getKey();
+                    value = (mapElement.getValue());
+                } else {
+                    value = mapElement.getKey();
+                    key = (mapElement.getValue());
+                }
+
+
                 break;
             }
             count++;
@@ -48,9 +52,8 @@ public class Semaphore {
 
         Scanner sc = new Scanner(System.in);
         List<String> list = new ArrayList<>();
-        String jj = "";
 
-        int random2 = (int) ( Math.random() * n);
+        int random2 = (int) (Math.random() * n);
 
 
 //        System.out.println(key + ":"+ value);
@@ -74,7 +77,7 @@ public class Semaphore {
 
             System.out.println("Write anything to clear");
 
-            jj = sc.next();
+            sc.next();
 
             for (int j = 0; j < 50; j++) {
                 System.out.println("\n");
