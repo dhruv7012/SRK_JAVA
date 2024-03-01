@@ -25,10 +25,11 @@ public class Semaphore {
         System.out.println(l);
 
 
-        int n = 3;
+
+        int n = 4;
 
 
-        int flag =(int) (Math.random() * 2);
+        int flag =(int) (Math.random() * 2); // 0 or 1
         int flag2 = (int) (Math.random() * l.size());
         int count = 0;
 
@@ -53,7 +54,7 @@ public class Semaphore {
         Scanner sc = new Scanner(System.in);
         List<String> list = new ArrayList<>();
 
-        int random2 = (int) (Math.random() * n);
+        int random2 = (int) (Math.random() * n); // 0 to 4
 
 
 //        System.out.println(key + ":"+ value);
