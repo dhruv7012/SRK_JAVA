@@ -16,11 +16,11 @@ public class Semaphore {
 
 
         l.put("London", "Paris");
-        l.put("Sarawbery", "Chery");
-        l.put("Singapor", "Hongkong");
+        l.put("Strawberry", "Chery");
+        l.put("Singapore", "Hong Cong");
         l.put("Captain America", "Iron Man");
-        l.put("BubbleGum", "Lolipop");
-        l.put("Accesecltor", "Elevator");
+        l.put("BubbleGum", "Lollipop");
+        l.put("Accelerator", "Elevator");
         l.put("Ice cream", "Yogurt");
 
 
@@ -41,7 +41,7 @@ public class Semaphore {
             int totalUd = sc.nextInt();
 
             List<Integer> arrList = new ArrayList<>();
-            int generateN = -1;
+            int generateN;
 
 //            for (int i = 0 ; i < totalUd; i++){
             while (arrList.size() != totalUd){
@@ -123,7 +123,7 @@ public class Semaphore {
 
             int u;
             int foundedUd=0;
-            boolean found = false;
+            boolean found;
 
 
             for (int i = 0 ; i < arrList.size(); i++) {
