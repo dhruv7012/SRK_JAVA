@@ -34,23 +34,28 @@ public class Semaphore {
 
         if (n >= 3) {
 
-
             int flag = (int) (Math.random() * 2); // 0 or 1
             int flag2 = (int) (Math.random() * l.size());
 
             System.out.print("How many Undercover required ?  : ");
             int totalUd = sc.nextInt();
 
-            int[] arr = new int[totalUd];
+            List<Integer> arrList = new ArrayList<>();
+            int generateN = -1;
 
-            for (int i = 0; i < arr.length; i++) {
-                arr[i] = (int) (Math.random() * n);
+//            for (int i = 0 ; i < totalUd; i++){
+            while (arrList.size() != totalUd){
+                generateN = (int) (Math.random() * n);
+                if (!arrList.contains(generateN)){
+                    arrList.add(generateN);
+                }
             }
 
-            for (int i = 0; i<arr.length ; i++){
+
+            for (int i = 0; i<arrList.size() ; i++){
 
                 System.out.println("array");
-                System.out.println(arr[i]);
+                System.out.println(arrList.get(i));
             }
 
             int count = 0;
@@ -91,9 +96,9 @@ public class Semaphore {
                     System.out.println("\n");
                 }
 
-                for (int j = 0; j < arr.length; j++) {
+                for (int j = 0; j < arrList.size(); j++) {
 
-                    if (i == arr[j] && i != mrWhite) {
+                    if (i == arrList.get(j) && i != mrWhite) {
                         System.out.println(key);
                         break;
                     } else if (i == mrWhite) {
@@ -125,8 +130,8 @@ public class Semaphore {
 
                 u = sc.nextInt() - 1;
 
-                for (int j = 0; j < arr.length; j++) {
-                    if (u == arr[j]) {
+                for (int j = 0; j < arrList.size(); j++) {
+                    if (u == arrList.get(j)) {
                         System.out.println("Yesssss " + list.get(u) + " is Undercover");
                         foundedUd++;
                         break;
