@@ -12,6 +12,8 @@ public class Semaphore {
         String key = "";
         String value = "";
         Map<String, String> l = new HashMap<>();
+        Scanner sc = new Scanner(System.in);
+
 
         l.put("London", "Paris");
         l.put("Sarawbery", "Chery");
@@ -22,86 +24,93 @@ public class Semaphore {
         l.put("Ice cream", "Yogurt");
 
 
-        System.out.println(l);
+//        System.out.println(l);
 
 
+        System.out.print("Enter the total number of players : ");
 
-        int n = 4;
+        int n = sc.nextInt();
+
+        if(n >= 3) {
 
 
-        int flag =(int) (Math.random() * 2); // 0 or 1
-        int flag2 = (int) (Math.random() * l.size());
-        int count = 0;
+            int flag = (int) (Math.random() * 2); // 0 or 1
+            int flag2 = (int) (Math.random() * l.size());
+            int count = 0;
 
-        for (Map.Entry<String, String> mapElement : l.entrySet()) {
+            for (Map.Entry<String, String> mapElement : l.entrySet()) {
 
-            if (flag2 == count) {
+                if (flag2 == count) {
 
-                if (flag == 0) {
-                    key = mapElement.getKey();
-                    value = (mapElement.getValue());
-                } else {
-                    value = mapElement.getKey();
-                    key = (mapElement.getValue());
+                    if (flag == 0) {
+                        key = mapElement.getKey();
+                        value = (mapElement.getValue());
+                    } else {
+                        value = mapElement.getKey();
+                        key = (mapElement.getValue());
+                    }
+
+
+                    break;
                 }
-
-
-                break;
+                count++;
             }
-            count++;
-        }
 
-        Scanner sc = new Scanner(System.in);
-        List<String> list = new ArrayList<>();
+            List<String> list = new ArrayList<>();
 
-        int random2 = (int) (Math.random() * n); // 0 to 4
+            int random2 = (int) (Math.random() * n); // 0 to 4
+            int mrWhite = (int) (Math.random() * n); // 0 to 4
 
 
 //        System.out.println(key + ":"+ value);
-        for (int i = 0; i < n; i++) {
+            for (int i = 0; i < n; i++) {
 
 
-            System.out.println("Next Players Turn");
+                System.out.println("Players " + (int)(i + 1) +"'s Turn");
+                System.out.print("Enter the name : ");
+                list.add(sc.next());
 
-            list.add(sc.next());
+                for (int j = 0; j < 50; j++) {
+                    System.out.println("\n");
+                }
 
-            for (int j = 0; j < 50; j++) {
-                System.out.println("\n");
+
+                if (i == random2 && i != mrWhite) {
+                    System.out.println(key);
+                } else if (i == mrWhite) {
+                    System.out.println("You are Mr. White");
+                } else {
+                    System.out.println(value);
+                }
+
+                System.out.println("Write anything to clear");
+
+                sc.next();
+
+                for (int j = 0; j < 50; j++) {
+                    System.out.println("\n");
+                }
+
             }
 
+            int u;
 
-            if (i == random2) {
-                System.out.println(key);
-            } else {
-                System.out.println(value);
+            for (int i = 0; i < n; i++) {
+
+                System.out.println("Write Number of player");
+
+                u = sc.nextInt() - 1;
+
+                if (u == random2) {
+                    System.out.println("Yesssss " + list.get(u) + " is Undercover");
+                    break;
+                } else {
+                    System.out.println("boooooooooooo.");
+                }
             }
-
-            System.out.println("Write anything to clear");
-
-            sc.next();
-
-            for (int j = 0; j < 50; j++) {
-                System.out.println("\n");
-            }
-
+        }else{
+            System.out.println("Minimum number of player is 3");
         }
-
-        int u;
-
-        for (int i = 0; i < n; i++) {
-
-            System.out.println("Write Number of player");
-
-            u = sc.nextInt() - 1;
-
-            if (u == random2) {
-                System.out.println("Yesssss " + list.get(u) + " is Undercover");
-                break;
-            } else {
-                System.out.println("boooooooooooo.");
-            }
-        }
-
     }
 
 }
