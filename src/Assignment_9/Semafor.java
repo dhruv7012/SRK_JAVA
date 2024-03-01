@@ -1,14 +1,8 @@
 package Assignment_9;
-
-
 import java.io.IOException;
 import java.util.*;
-
-public class Semaphore {
-
-
+public class Semafor {
     public static void main(String[] args) throws IOException {
-
         String key = "";
         String value = "";
         Map<String, String> l = new HashMap<>();
@@ -31,28 +25,11 @@ public class Semaphore {
 
         int n = sc.nextInt();
 
-
-        if (n >= 3) {
+        if(n >= 3) {
 
 
             int flag = (int) (Math.random() * 2); // 0 or 1
             int flag2 = (int) (Math.random() * l.size());
-
-            System.out.print("How many Undercover required ?  : ");
-            int totalUd = sc.nextInt();
-
-            int[] arr = new int[totalUd];
-
-            for (int i = 0; i < arr.length; i++) {
-                arr[i] = (int) (Math.random() * n);
-            }
-
-            for (int i = 0; i<arr.length ; i++){
-
-                System.out.println("array");
-                System.out.println(arr[i]);
-            }
-
             int count = 0;
 
             for (Map.Entry<String, String> mapElement : l.entrySet()) {
@@ -75,7 +52,7 @@ public class Semaphore {
 
             List<String> list = new ArrayList<>();
 
-//            int random2 = (int) (Math.random() * n); // 0 to 4
+            int random2 = (int) (Math.random() * n); // 0 to 4
             int mrWhite = (int) (Math.random() * n); // 0 to 4
 
 
@@ -83,7 +60,7 @@ public class Semaphore {
             for (int i = 0; i < n; i++) {
 
 
-                System.out.println("Players " + (i + 1) + "'s Turn");
+                System.out.println("Players " + (int)(i + 1) +"'s Turn");
                 System.out.print("Enter the name : ");
                 list.add(sc.next());
 
@@ -91,19 +68,13 @@ public class Semaphore {
                     System.out.println("\n");
                 }
 
-                for (int j = 0; j < arr.length; j++) {
 
-                    if (i == arr[j] && i != mrWhite) {
-                        System.out.println(key);
-                        break;
-                    } else if (i == mrWhite) {
-                        System.out.println("You are Mr. White");
-                        break;
-                    } else {
-                        System.out.println(value);
-                        break;
-                    }
-
+                if (i == random2 && i != mrWhite) {
+                    System.out.println(key);
+                } else if (i == mrWhite) {
+                    System.out.println("You are Mr. White");
+                } else {
+                    System.out.println(value);
                 }
 
                 System.out.println("Write anything to clear");
@@ -118,25 +89,22 @@ public class Semaphore {
 
             int u;
 
-            for (int i = 0; i <= totalUd; i++) {
+            for (int i = 0; i < n; i++) {
 
-                System.out.print("Guess the under cover : ");
+                System.out.println("Write Number of player");
 
                 u = sc.nextInt() - 1;
 
-                for (int j = 0; j < arr.length; j++) {
-                    if (u == arr[j]) {
-                        System.out.println("Yesssss " + list.get(u) + " is Undercover");
-                        break;
-                    } else {
-                        System.out.println("boooooooooooo.");
-                    }
+                if (u == random2) {
+                    System.out.println("Yesssss " + list.get(u) + " is Undercover");
+                    break;
+                } else {
+                    System.out.println("boooooooooooo.");
                 }
             }
-        } else {
+        }else{
             System.out.println("Minimum number of player is 3");
         }
     }
 
 }
-
