@@ -123,23 +123,38 @@ public class Semaphore {
 
             int u;
             int foundedUd=0;
+            boolean found = false;
+
+
+            for (int i = 0 ; i < arrList.size(); i++) {
+
+                System.out.println(arrList.get(i)+1);
+            }
 
             do {
 
                 System.out.print("Guess the under cover : ");
 
-                u = sc.nextInt() - 1;
+                found = false;
+
+                u = sc.nextInt()-1;
 
                 for (int j = 0; j < arrList.size(); j++) {
+
+//                    System.out.println(u + " : " + arrList.get(j));
+
                     if (u == arrList.get(j)) {
                         System.out.println("Yesssss " + list.get(u) + " is Undercover");
                         foundedUd++;
-                        break;
-                    } else {
-                        System.out.println("boooooooooooo.");
+                        found = true;
                         break;
                     }
                 }
+
+                if (!found){
+                    System.out.println("booooooooooooooooo");
+                }
+
             }while (totalUd != foundedUd);
         } else {
             System.out.println("Minimum number of player is 3");
