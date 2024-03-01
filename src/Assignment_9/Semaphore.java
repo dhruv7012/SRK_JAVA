@@ -10,6 +10,7 @@ public class Semaphore {
     public static void main(String[] args) throws IOException {
 
         String key = "";
+        String gdhruv;
         String value = "";
         Map<String, String> l = new HashMap<>();
         Scanner sc = new Scanner(System.in);
