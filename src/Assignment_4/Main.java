@@ -46,5 +46,17 @@ public class Main {
 
         System.out.println("After Swap : S1 = " + s1 + " and S2 = " + s2);
 
+
+//        QUE 0
+
+        String s0 = "Dhruv Hai Ham";
+
+        Pattern p = Pattern.compile("(\\b)[a-zA-Z]");
+
+        Matcher mx = p.matcher(s0);
+
+        while (mx.find()) {
+            System.out.print(mx.group());
+        }
     }
 }
